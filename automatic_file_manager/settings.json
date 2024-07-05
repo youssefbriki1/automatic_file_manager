@@ -1,0 +1,6 @@
+{
+    "sort_files": {"by_name_asc":false, "by_name_desc":false, "by_date_asc":false, "by_date_desc":false},
+    "duplicates": {"delete":false, "move":false, "copy":false},
+    "move_files": {"llm_use":false},
+    ...
+}
