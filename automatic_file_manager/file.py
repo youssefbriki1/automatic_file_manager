@@ -12,6 +12,7 @@ class File:
         self.encoding_64 = self.encode_pdf_to_base64()
         self.cdate = os.path.getctime(self.full_path)
         self.mdate = os.path.getmtime(self.full_path)
+        self.write_into_json()
 
         
     def encode_pdf_to_base64(self):
@@ -50,7 +51,13 @@ class File:
         return os.access(self.full_path, os.R_OK)
 
     
-    def write_into_json(self, file="files.json"):
+    def write_into_json(self, file="files.json"): # Should Add metadata 
+        """
+        Storing the file information into a json file
+
+        Args:
+            file (str, optional): _description_. Defaults to "files.json".
+        """
         dico = {}
         dico[self.name] = {"full name": str(self),
                            "extension":self.extension,
